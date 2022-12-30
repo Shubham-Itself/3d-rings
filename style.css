@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html , body{
+    font-size: 62.5%;
+
+}
+
+body{
+    min-height: 100vh;
+    background: linear-gradient(to right, #ff6e75, #bfe9ff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    width: 25rem;
+    height: 25rem;
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: perspective(50rem) rotateX(135deg);
+    
+   
+
+
+
+}
+
+.container span{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 1.5rem solid white;
+    animation: anim 8s ease-in-out infinite;
+    animation-delay: calc(-1s * var(--i));
+    
+
+}
+
+@keyframes anim{
+    0%{
+        transform: translateZ(-10rem);
+        width: 100%;
+        height: 100%;
+    }
+    25%{
+        transform: translateZ(10rem);
+        width: 100%;
+        height: 100%;
+    }
+    50%{
+        transform: translateZ(10rem);
+        width: 15%;
+        height: 15%;
+    }
+    75%{
+        transform: translateZ(-10rem);
+        width: 15%;
+        height: 15%;
+    }
+
+    100%{
+        transform: translateZ(-10rem);
+        width: 100%;
+        height: 100%;
+    }
+} 
+
+
+.container span:nth-child(2){
+    border-color: red;
+}
+.container span:nth-child(3){
+    border-color: skyblue;
+}
+
+.container span:nth-child(4){
+    border-color: darkblue;
+}
+
+.container span:nth-child(5){
+    border-color: darkturquoise;
+}
+
+.container span:nth-child(6){
+    border-color: brown;
+}
+
+.container span:nth-child(7){
+    border-color: grey;
+}
+
+.container span:nth-child(8){
+    border-color: purple;
+}
+
+
+
+
